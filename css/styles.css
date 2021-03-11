@@ -1,0 +1,38 @@
+:root {
+  --main-text-color: --;
+}
+
+body {
+  font-family: 'Open Sans';
+}
+
+.socials-list {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: var(--title-color);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+
+}
+
+address {
+  font-style: normal;
+}
+.dark-bg {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-bg-text-color);
+}
+.dark-bg .title,
+.dark-bg .button {
+  --title-color: #ffffff;
+}
+.dark-bg .button {
+  --title-color: rgba(157, 164, 189, 0.6)
+}
