@@ -1,9 +1,43 @@
 :root {
-  --main-text-color: --;
+  --main-text-color: #555555;
+  --dark-bg-text-color: #9da4bd;
+  --accent-color: #ff6c00;
+  --title-color: #303030;
+  --dark-bg-color: #191c26;
+  --title-font: "Raleway", sans-serif;
 }
 
 body {
-  font-family: 'Open Sans';
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02;
+  color: var(--main-text-color);
+}
+
+/* .socials-list {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: var(--title-color);
+} */
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
+.button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09;
+  text-transform: uppercase;
+  color: var(--title-color);
 }
 
 .socials-list {
@@ -13,26 +47,37 @@ body {
   color: var(--title-color);
 }
 
-.link {
-  text-decoration: none;
-  color: inherit;
+.title {
+  font-family: var(--title-font);
+  font-weight: 700;
+  letter-spacing: 0.05;
+  color: var(--title-color);
 }
 
-.list {
+.page-title {
+  font-size: 72px;
+  line-height: 1.18;
+}
 
+.section-title {
+  font-size: 42px;
+  line-height: 1.167;
 }
 
 address {
   font-style: normal;
 }
+
 .dark-bg {
   background-color: var(--dark-bg-color);
   color: var(--dark-bg-text-color);
 }
+
 .dark-bg .title,
 .dark-bg .button {
   --title-color: #ffffff;
 }
+
 .dark-bg .button {
-  --title-color: rgba(157, 164, 189, 0.6)
+  --title-color: rgba(157, 164, 189, 0.6);
 }
