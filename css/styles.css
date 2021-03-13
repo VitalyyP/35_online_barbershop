@@ -4,6 +4,7 @@
   --accent-color: #ff6c00;
   --title-color: #303030;
   --dark-bg-color: #191c26;
+  --second-bg-color: #f7f7f7;
   --title-font: "Raleway", sans-serif;
 }
 
@@ -15,18 +16,30 @@ body {
   color: var(--main-text-color);
 }
 
-/* .socials-list {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  color: var(--title-color);
-} */
+address {
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px;
+  overflow: hidden;
+}
 
 .link {
   text-decoration: none;
   color: inherit;
 }
 
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
 .list {
   list-style: none;
 }
@@ -47,10 +60,27 @@ body {
   color: var(--title-color);
 }
 
+.copyrigth {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--dark-bg-text-color);
+}
+
 .title {
   font-family: var(--title-font);
   font-weight: 700;
   letter-spacing: 0.05;
+  color: var(--title-color);
+}
+
+.title-label {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--title-color);
 }
 
@@ -64,13 +94,52 @@ body {
   line-height: 1.167;
 }
 
-address {
-  font-style: normal;
+.header {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.benefits-item {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+  color: var(--title-color);
+  background-color: var(--second-bg-color);
+}
+
+.benefits-number {
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: 0.05em;
+}
+
+.team {
+  background-color: var(--second-bg-color);
+}
+
+.team-item {
+  text-align: center;
+}
+
+.team-member {
+  font-size: 18px;
+  line-height: 1.39;
+  color: var(--title-color);
+}
+
+.team-item p {
+  font-size: 14px;
+  line-height: 1.36;
+  color: var(--accent-color);
 }
 
 .dark-bg {
   background-color: var(--dark-bg-color);
-  color: var(--dark-bg-text-color);
+  /* color: var(--dark-bg-text-color); */
 }
 
 .dark-bg .title,
@@ -78,6 +147,6 @@ address {
   --title-color: #ffffff;
 }
 
-.dark-bg .button {
+.dark-bg .title-label {
   --title-color: rgba(157, 164, 189, 0.6);
 }
