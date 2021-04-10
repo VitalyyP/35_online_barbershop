@@ -225,6 +225,11 @@ address {
   padding-bottom: 130px;
 }
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 600;
@@ -257,10 +262,14 @@ address {
 .hero {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .hero .container {
+  position: relative;
+  padding-top: 272px;
   height: 100vh;
   background-image: url("../images/hero/slider-img-3.jpg");
   background-repeat: no-repeat;
@@ -273,6 +282,20 @@ address {
 
 }
 
+.hero-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 115px;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  background-color: #fff;
+}
+
+.hero-sidebar .socials-list {
+  transform: rotate(-90deg) translateX(50%);
+}
 .price {
   background-image: url("../images/price/bg.png");
   background-repeat: no-repeat;
