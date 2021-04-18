@@ -84,6 +84,7 @@
           </ul>
         </div>
         <a class="link button" href="" data-modal-open>Онлайн-запись</a>
+
       </div>
     </section>
     <section class="section benefits">
@@ -243,6 +244,12 @@
       <div class="container flexbox">
         <section class="section content-box" id="contacts">
           <h2 class="title section-title">Онлайн-запись</h2>
+          <form class="form">
+            <input class="form-field" type="text" name="user-name" placeholder="Имя*" pattern="^[A-Za-zА-Яа-яЁёЄєІіЇї'\s]+$" required>
+            <input class="form-field" type="tel" name="user-phone" placeholder="Телефон*" pattern="[0-9]{10}" required>
+            <textarea class="form-field form-message" name="user-message" id="" cols="30" rows="4" placeholder="Сообщение"></textarea>
+            <button type="submit" class="button">Отправить</button>
+          </form>
         </section>
         <section class="section content-box">
           <h2 class="title section-title">Контакты</h2>
@@ -291,9 +298,17 @@
     </div>
   </footer>
   <div class="backdrop is-hidden" data-modal>
-    <div class="modal">
+    <div class="modal dark-bg">
       <button class="btn-close" data-modal-close>x</button>
       <p class="modal-title">Свяжитесь с нами</p>
+      <form class="form">
+        <input class="form-field" type="text" name="user-name" placeholder="Имя*" pattern="^[A-Za-zА-Яа-яЁёЄєІіЇї'\s]+$"
+          required>
+        <input class="form-field" type="tel" name="user-phone" placeholder="Телефон*" pattern="[0-9]{10}" required>
+        <textarea class="form-field form-message" name="user-message" id="" cols="30" rows="4"
+          placeholder="Сообщение"></textarea>
+        <button type="submit" class="button">Отправить</button>
+      </form>
     </div>
   </div>
   <script src="./js/modal.js"></script>

@@ -8,7 +8,8 @@
   --title-font: "Raleway", sans-serif;
   --accent-text-color: #ffffff;
   --grid-item: 2;
-  --annimation: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --form-color: rgba(157, 164, 189, 0.4);
+  --annimation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -435,6 +436,68 @@ address {
   color: var(--accent-color);
 }
 
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-field {
+  width: calc((100% - 30px) / 2);
+  padding-bottom: 8px;
+  margin-bottom: 44px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: var(--accent-text-color);
+  background-color: transparent;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid var(--form-color);
+}
+
+/* .form:focus-within {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+} */
+
+/* .form-field:valid:not(:focus) {color: green;} */
+
+/* .form-field:invalid:not(:focus) {color: red;} */
+
+/* .form-field:required {} */
+
+/* .form-field:placeholder-shown {} */
+
+.form-field:focus {
+  outline: none;
+  border-bottom: 1px solid var(--accent-text-color);
+}
+
+.form-field:focus::placeholder {
+  color: var(--second-bg-color);
+}
+
+.form-field.form-field:-webkit-autofill,
+.form-field.form-field:-webkit-autofill:hover,
+.form-field.form-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--accent-text-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--dark-bg-color) inset;
+}
+
+.form-field::placeholder {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--form-color);
+}
+
+.form-message {
+  width: 100%;
+  resize: none;
+}
+
 .contacts-address {
   margin-bottom: 70px;
 }
@@ -507,7 +570,7 @@ address {
   min-height: 450px;
   padding: 40px;
   border-radius: 30px;
-  background-color: var(--accent-text-color);
+  /* background-color: var(--accent-text-color); */
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--annimation);
 }
