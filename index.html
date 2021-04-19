@@ -302,9 +302,20 @@
       <button class="btn-close" data-modal-close>x</button>
       <p class="modal-title">Свяжитесь с нами</p>
       <form class="form">
-        <input class="form-field" type="text" name="user-name" placeholder="Имя*" pattern="^[A-Za-zА-Яа-яЁёЄєІіЇї'\s]+$"
-          required>
-        <input class="form-field" type="tel" name="user-phone" placeholder="Телефон*" pattern="[0-9]{10}" required>
+        <label class="form-field-label">
+          <input class="form-field" type="text" name="user-name" placeholder=" " pattern="^[A-Za-zА-Яа-яЁёЄєІіЇї'\s]+$" required>
+          <svg class="icon">
+            <use href="./images/sprite.svg#icon-person"></use>
+          </svg>
+          <span class="form-field-text">Имя*</span>
+        </label>
+        <label class="form-field-label">
+          <input class="form-field" type="tel" name="user-phone" placeholder=" " pattern="[0-9]{10}" required>
+          <svg class="icon">
+            <use href="./images/sprite.svg#icon-telephone"></use>
+          </svg>
+          <span class="form-field-text">Телефон*</span>
+        </label>
         <textarea class="form-field form-message" name="user-message" id="" cols="30" rows="4"
           placeholder="Сообщение"></textarea>
         <button type="submit" class="button">Отправить</button>
