@@ -629,6 +629,7 @@ address {
 .modal .form-message {
   margin-bottom: 40px;
 }
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
 }
