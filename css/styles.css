@@ -1,9 +1,9 @@
 :root {
   --main-text-color: #555555;
-  --dark-bg-text-color: #9da4bd;
+  --section--dark-bg-text-color: #9da4bd;
   --accent-color: #ff6c00;
   --title-color: #303030;
-  --dark-bg-color: #191c26;
+  --section--dark-bg-color: #191c26;
   --second-bg-color: #f7f7f7;
   --title-font: 'Raleway', sans-serif;
   --accent-text-color: #ffffff;
@@ -51,7 +51,7 @@ address {
 }
 
 .section {
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 .container {
   width: 1200px;
@@ -59,7 +59,7 @@ address {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
 }
 
 .flexbox {
@@ -157,7 +157,7 @@ address {
 .social-icon:not(:last-child) {
   margin-right: 10px;
 }
-.social-link {
+.social-icons__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,15 +167,15 @@ address {
   background-color: var(--accent-text-color);
 }
 
-.social-icons .icon {
+.social-icons__icon {
   width: 20px;
   height: 20px;
   color: var(--title-color);
   transition: fill var(--annimation);
 }
 
-.social-link:hover .icon,
-.social-link:focus .icon {
+.social-icons__link:hover .social-icons__icon,
+.social-icons__link:focus .social-icons__icon {
   fill: var(--accent-color);
 }
 
@@ -184,15 +184,17 @@ address {
   display: inline-block;
   width: 60px;
   height: 1px;
-  margin-right: 20px;
+  margin-right: 40px;
   background-color: currentColor;
 }
 .copyrigth {
+  height: 15px;
+  margin-bottom: 0;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
-  color: var(--dark-bg-text-color);
+  color: var(--section--dark-bg-text-color);
 }
 
 .logo {
@@ -496,7 +498,7 @@ address {
 .form__field.form__field:-webkit-autofill:hover,
 .form__field.form__field:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--accent-text-color);
-  -webkit-box-shadow: 0 0 0px 1000px var(--dark-bg-color) inset;
+  -webkit-box-shadow: 0 0 0px 1000px var(--section--dark-bg-color) inset;
 }
 
 .form__field::placeholder,
@@ -550,7 +552,7 @@ address {
   width: 24px;
   height: 24px;
   margin-right: 20px;
-  stroke: var(--dark-bg-text-color);
+  stroke: var(--section--dark-bg-text-color);
   transition: stroke var(--annimation);
 }
 
@@ -576,17 +578,17 @@ address {
   --grid__item: 4;
 }
 
-.dark-bg {
-  background-color: var(--dark-bg-color);
-  color: var(--dark-bg-text-color);
+.section--dark-bg {
+  background-color: var(--section--dark-bg-color);
+  color: var(--section--dark-bg-text-color);
 }
 
-.dark-bg .title,
-.dark-bg .button {
+.title--light,
+.button--light {
   --title-color: var(--accent-text-color);
 }
 
-.dark-bg .title-label {
+.title-label--light {
   --title-color: rgba(157, 164, 189, 0.6);
 }
 
@@ -622,22 +624,22 @@ address {
   transition: transform var(--annimation);
 }
 
-.modal .form__field {
+.modal-form__field {
   width: 100%;
   margin-bottom: 0;
   padding-left: 23px;
 }
 
-.modal .form__field:focus + .icon {
+.modal-form__field:focus + .icon {
   fill: var(--accent-text-color);
 }
 
-.modal .form__field-label {
+.modal-form__field-label {
   width: calc((100% - 30px) / 2);
   margin-bottom: 44px;
 }
 
-.modal .form__message {
+.modal-form__message {
   margin-bottom: 40px;
 }
 
@@ -645,7 +647,7 @@ address {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-.btn-close {
+.modal__btn-close {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -663,7 +665,7 @@ address {
   border-radius: 50%;
 }
 
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 30px;
   text-align: center;
