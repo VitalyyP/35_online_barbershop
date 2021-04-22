@@ -35,6 +35,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 address {
   font-style: normal;
 }
@@ -53,6 +54,7 @@ address {
 .section {
   /* outline: 1px solid tomato; */
 }
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -70,6 +72,7 @@ address {
 .content-box {
   flex-basis: calc((100% - 30px) / 2);
 }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -93,6 +96,7 @@ address {
 .link:focus {
   color: var(--accent-color);
 }
+
 .list {
   list-style: none;
   margin-top: 0;
@@ -130,9 +134,6 @@ address {
   margin-right: 40px;
 }
 
-/* .contacts-nav a:not(:last-child) {
-  margin-right: 40px;
-} */
 .socials-list {
   display: flex;
   align-items: center;
@@ -157,6 +158,7 @@ address {
 .social-icon:not(:last-child) {
   margin-right: 10px;
 }
+
 .social-icons__link {
   display: flex;
   justify-content: center;
@@ -187,6 +189,7 @@ address {
   margin-right: 40px;
   background-color: currentColor;
 }
+
 .copyrigth {
   height: 15px;
   margin-bottom: 0;
@@ -235,6 +238,14 @@ address {
   padding-top: 130px;
   padding-bottom: 130px;
 }
+
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -254,12 +265,6 @@ address {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
 }
 
 .header__logo {
@@ -306,15 +311,16 @@ address {
   background-color: #fff;
 }
 
-.about p {
+.about__text {
   margin-bottom: 20px;
 }
 
-.about p + p {
+.about__text--details {
   margin-bottom: 40px;
   font-size: 14px;
   line-height: 1.86;
 }
+
 .price {
   background-image: url('../images/price/bg.png');
   background-repeat: no-repeat;
@@ -434,7 +440,7 @@ address {
   color: var(--title-color);
 }
 
-.team__item p {
+.team__member-position {
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.36;
