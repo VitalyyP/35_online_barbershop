@@ -1,0 +1,39 @@
+.hero {
+  display: flex;
+  align-items: center;
+  /* min-height: 100vh; */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero__container {
+  position: relative;
+  padding-top: 272px;
+  padding-bottom: 191.6px;
+  background-image: url('../images/hero/slider-img-3.jpg');
+  background-repeat: no-repeat;
+  background-position: 115px 0;
+}
+
+.hero__content {
+  width: 650px;
+  padding-left: 200px;
+}
+
+.hero__sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 115px;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+
+.hero__title {
+  font-size: 72px;
+  line-height: 1.18;
+}

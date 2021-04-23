@@ -1,0 +1,25 @@
+.contacts__address {
+  margin-bottom: 70px;
+}
+
+.contacts-list__link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-list .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+  stroke: var(--section--dark-bg-text-color);
+  transition: stroke var(--annimation);
+}
+
+.contacts-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-list .link:hover .icon,
+.contacts-list .link:focus .icon {
+  stroke: var(--accent-color);
+}
