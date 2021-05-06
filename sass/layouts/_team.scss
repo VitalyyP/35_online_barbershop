@@ -2,9 +2,23 @@
   background-color: var(--second-bg-color);
 }
 
+.team-list {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    justify-content: center;
+  }
+}
+
 .team__item {
-  --grid__item: 3;
+  --grid__item: 1;
   text-align: center;
+  background-color:gray;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    --grid__item: 3;
+  }
 }
 
 .team__member {

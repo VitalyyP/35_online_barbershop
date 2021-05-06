@@ -344,11 +344,29 @@ address {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .button {
@@ -374,11 +392,62 @@ address {
 }
 
 .menu {
-  display: inline-flex;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: inline-flex;
+  }
 }
 
 .menu__item:not(:last-child) {
   margin-right: 40px;
+}
+
+.menu__toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu__toggle-line {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 2.67px;
+  background-color: tomato;
+}
+
+.menu__toggle:checked ~ .menu__toggle-line {
+  background-color: transparent;
+}
+
+.menu__toggle-line::before, .menu__toggle-line::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: tomato;
+}
+
+.menu__toggle-line::before {
+  bottom: 6.67px;
+}
+
+.menu__toggle:checked ~ .menu__toggle-line::before {
+  transform: rotate(45deg);
+  bottom: 0;
+}
+
+.menu__toggle-line::after {
+  top: 6.67px;
+}
+
+.menu__toggle:checked ~ .menu__toggle-line::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 .socials-list {
@@ -688,6 +757,16 @@ address {
   margin-left: 40px;
 }
 
+.header__link {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header__link {
+    display: block;
+  }
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -840,9 +919,28 @@ address {
   background-color: var(--second-bg-color);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team-list {
+    justify-content: center;
+  }
+}
+
 .team__item {
-  --grid__item: 3;
+  --grid__item: 1;
   text-align: center;
+  background-color: gray;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team__item {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    --grid__item: 3;
+  }
 }
 
 .team__member {
@@ -859,7 +957,20 @@ address {
 }
 
 .gallery__item {
-  --grid__item: 4;
+  --grid__item: 1;
+  background-color: gray;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__item {
+    --grid__item: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    --grid__item: 4;
+  }
 }
 
 .contacts__address {

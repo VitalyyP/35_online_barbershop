@@ -27,3 +27,11 @@
   color: var(--accent-text-color);
   margin-left: 40px;
 }
+
+.header__link {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
