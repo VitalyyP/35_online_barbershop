@@ -18,7 +18,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header__container">
+      <div class="container header__container container--relative">
         <!-- <div> -->
         <nav class="navigation">
           <a class="logo header__logo" href="./"
@@ -45,19 +45,44 @@
         </nav>
         <!-- </div> -->
         <!-- <div> -->
-        <a class="link header__link" href="tel:+380441111111">+38 044 111 11 11</a>
+        <a class="link header__link" href="tel:+380441111111"
+          >+38 044 111 11 11</a
+        >
         <a class="link header__link button header__button" href="#contact-us"
           >Онлайн-запись</a
         >
         <!-- </div> -->
+        <label class="menu-toggle__label" for="menu-toggle">
+          <!-- <div class="menu-toggle__box"> -->
+          <input
+            type="checkbox"
+            class="menu-toggle"
+            name="menu-toggle"
+            id="menu-toggle"
+          />
+          <span class="menu-toggle__line"></span>
+          <!-- </div> -->
+        </label>
       </div>
-      <label class="menu__toggle-label" for="menu__toggle">
-        <div class="menu__toggle-box">
-          <input type="checkbox" class="menu__toggle" name="menu__toggle" id="menu__toggle" />
-          <span class="menu__toggle-line"></span>
-        </div>
-      </label>
     </header>
+    <!-- <div class="mobile-menu__overlay">
+      <div class="mobile-menu">
+        <ul class="list menu">
+          <li class="menu__item">
+            <a class="link menu__link" href="#about">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="link menu__link" href="#price">Услуги и цены</a>
+          </li>
+          <li class="menu__item">
+            <a class="link menu__link" href="#team">Мастера</a>
+          </li>
+          <li class="menu__item">
+            <a class="link menu__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
     <main>
       <section class="hero section">
         <div class="container hero__container section--dark-bg">

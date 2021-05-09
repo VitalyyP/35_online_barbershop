@@ -345,8 +345,6 @@ address {
 
 .container {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -366,7 +364,13 @@ address {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
+}
+
+.container--relative {
+  position: relative;
 }
 
 .button {
@@ -405,47 +409,74 @@ address {
   margin-right: 40px;
 }
 
-.menu__toggle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.mobile-menu {
+  width: 100%;
+  min-width: 327px;
+  height: 100vh;
+  background-color: var(--accent-text-color);
+  box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.04), -2px 0px 4px rgba(0, 0, 0, 0.08), -1px 0px 3px rgba(0, 0, 0, 0.16);
 }
 
-.menu__toggle-line {
-  position: relative;
+.mobile-menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vh;
+  background: rgba(25, 28, 38, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 39px;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+.menu-toggle__box {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-toggle__line {
+  position: absolute;
+  top: 28px;
+  right: 39px;
   display: block;
   width: 24px;
   height: 2.67px;
-  background-color: tomato;
+  background-color: var(--accent-text-color);
 }
 
-.menu__toggle:checked ~ .menu__toggle-line {
+.menu-toggle:checked ~ .menu-toggle__line {
   background-color: transparent;
 }
 
-.menu__toggle-line::before, .menu__toggle-line::after {
-  content: "";
+.menu-toggle__line::before, .menu-toggle__line::after {
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: tomato;
+  background-color: var(--accent-text-color);
 }
 
-.menu__toggle-line::before {
+.menu-toggle__line::before {
   bottom: 6.67px;
 }
 
-.menu__toggle:checked ~ .menu__toggle-line::before {
+.menu-toggle:checked ~ .menu-toggle__line::before {
   transform: rotate(45deg);
   bottom: 0;
 }
 
-.menu__toggle-line::after {
+.menu-toggle__line::after {
   top: 6.67px;
 }
 
-.menu__toggle:checked ~ .menu__toggle-line::after {
+.menu-toggle:checked ~ .menu-toggle__line::after {
   transform: rotate(-45deg);
   top: 0;
 }
@@ -733,13 +764,19 @@ address {
   left: 0;
   z-index: 100;
   width: 100%;
-  padding-top: 32px;
+  padding-top: 40px;
   padding-bottom: 32px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.333;
   letter-spacing: 0.1em;
   color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 768) {
+  .header {
+    padding-top: 32px;
+  }
 }
 
 .header__container {
@@ -1000,8 +1037,15 @@ address {
 }
 
 .footer {
-  padding-top: 56px;
-  padding-bottom: 56px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }
 
 .footer__container {
@@ -1017,6 +1061,12 @@ address {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: var(--section--dark-bg-text-color);
+}
+
+@media screen and (max-width: 767.98px) {
+  .copyrigth {
+    padding-top: 35px;
+  }
 }
 
 .button--light {
